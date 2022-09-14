@@ -1,5 +1,7 @@
 # Archive of Suapapa's wiki
 
+Live > [HERE](https://homin.dev/wiki/) <
+
 This is a run-able archive for Suapapa's wiki which is onlined till May2011 (maybe) in following links
 
 - http://web.suapapa.net:8080/wiki
