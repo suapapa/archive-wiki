@@ -13,8 +13,8 @@ RUN cp -r /tmp/data/pages/* /var/www/html/wiki/data/pages/
 RUN cp -r /tmp/data/media/* /var/www/html/wiki/data/media/
 
 # readonly for visitors
-COPY conf/* /var/www/html/wiki/conf/
-
+COPY conf/*.php /var/www/html/wiki/conf/
+COPY conf/001-wiki.conf /etc/apache2/sites-enabled/000-default.conf
 RUN chown -R www-data.www-data /var/www/html/wiki
 RUN rm dokuwiki-stable.tgz
 RUN rm -rf /tmp/data*
