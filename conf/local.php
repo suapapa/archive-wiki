@@ -10,6 +10,7 @@
 
 
 $conf['title']       = 'Suapapa\'s Wiki';        //what to show in the title
+$conf['baseurl']     = 'homin.dev';
 
 $conf['useacl']      = 1;                //Use Access Control Lists to restrict access?
 $conf['superuser']   = 'suapapa';
