@@ -17,6 +17,8 @@ RUN cd /tmp && tar -xf data.tar.xz
 RUN cp -r /tmp/data/pages/* /var/www/html/wiki/data/pages/
 RUN cp -r /tmp/data/media/* /var/www/html/wiki/data/media/
 
+COPY ads.txt /var/www/html/wiki/
+
 # readonly for visitors
 COPY conf/*.php /var/www/html/wiki/conf/
 # url prefix setting
