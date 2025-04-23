@@ -18,13 +18,13 @@ RUN tar -xf data.tar.xz
 
 COPY ads.txt .
 
+COPY inc/*.php ./inc/
 # readonly for visitors
 COPY conf/*.php ./conf/
 
 RUN rm *.tgz *.tar.gz *.tar.xz
-RUN chown -R 82.82 *
+RUN chown -R 82:82 *
 
-# RUN chown -R www-data.www-data /tmp/data
 COPY copy-wikidata.sh /
 RUN chmod +x /copy-wikidata.sh
 
