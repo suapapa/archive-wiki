@@ -13,8 +13,10 @@ RUN tar xf dokuwiki-plugin-googleads-1.0.1.tar.gz --strip-components=1 -C ./lib/
 COPY main.php ./lib/tpl/dokuwiki/main.php
 COPY local_pref.php ./lib/plugins/googleads/local_pref.php
 
-COPY data.tar.xz .
-RUN tar -xf data.tar.xz
+# COPY data.tar.xz .
+# RUN tar -xf data.tar.xz
+COPY data.tar.gz .
+RUN tar -xzf data.tar.gz
 
 COPY ads.txt .
 
@@ -22,7 +24,8 @@ COPY inc/*.php ./inc/
 # readonly for visitors
 COPY conf/*.php ./conf/
 
-RUN rm *.tgz *.tar.gz *.tar.xz
+# RUN rm *.tgz *.tar.gz *.tar.xz
+RUN rm *.tgz *.tar.gz
 RUN chown -R 82:82 *
 
 COPY copy-wikidata.sh /
